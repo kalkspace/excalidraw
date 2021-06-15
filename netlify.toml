@@ -1,5 +1,6 @@
 [build]
   functions = "functions"
+  command = "cp include/linux/* node_modules/canvas/build/Release/ && yarn build"
 
 [functions]
   node_bundler = "esbuild"
