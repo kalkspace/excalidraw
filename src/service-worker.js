@@ -32,13 +32,6 @@ self.addEventListener("message", (event) => {
 workbox.core.clientsClaim();
 workbox.precaching.precacheAndRoute(self.__WB_MANIFEST);
 
-workbox.routing.registerNavigationRoute(
-  workbox.precaching.getCacheKeyForURL("./index.html"),
-  {
-    blacklist: [/^\/_/, /\/[^/?]+\.[^/]+$/],
-  },
-);
-
 // Cache relevant font files
 workbox.routing.registerRoute(
   new RegExp("/(fonts.css|.+.(ttf|woff2|otf))"),
