@@ -3,6 +3,12 @@
   command = "yarn build"
   environment = { LD_LIBRARY_PATH = "" }
 
+[[redirects]]
+from = "/export"
+to = "/.netlify/functions/export"
+status = 200
+force = true
+
 [functions]
   node_bundler = "esbuild"
   external_node_modules = ["canvas", "lzma"]
