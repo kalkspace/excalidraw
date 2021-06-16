@@ -1,6 +1,7 @@
 [build]
   functions = "functions"
-  command = "yarn build && npm rebuild"
+  command = "yarn build"
+  environment = { LD_LIBRARY_PATH = "" }
 
 [functions]
   node_bundler = "esbuild"
