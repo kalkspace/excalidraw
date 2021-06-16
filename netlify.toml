@@ -1,10 +1,6 @@
 [build]
   functions = "functions"
-  command = """
-cp functions/export/lib/* node_modules/canvas/build/Release/ && \
-ls -la node_modules/canvas/build/Release/ && \
-yarn build
-"""
+  command = "yarn build && npm rebuild"
 
 [functions]
   node_bundler = "esbuild"
