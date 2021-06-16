@@ -1,3 +1,6 @@
+const { LAMBDA_TASK_ROOT, LD_LIBRARY_PATH, LAMBDA_RUNTIME_DIR } = process.env;
+console.log({ LAMBDA_TASK_ROOT, LD_LIBRARY_PATH, LAMBDA_RUNTIME_DIR });
+
 import "./jsdom";
 import { Handler, HandlerResponse } from "@netlify/functions";
 import { renderScene, renderSceneToSvg } from "../../src/renderer/renderScene";
